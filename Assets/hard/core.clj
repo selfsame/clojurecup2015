@@ -9,6 +9,8 @@
   ([x] (UnityEngine.Debug/Log x))
   ([x & more] (UnityEngine.Debug/Log (apply str (cons x more)))))
 
+(def delta-time UnityEngine.Time/deltaTime)
+
 (defn vector2? [x] (instance? UnityEngine.Vector2 x))
 (defn vector3? [x] (instance? UnityEngine.Vector3 x))
 (defn vector4? [x] (instance? UnityEngine.Vector4 x))

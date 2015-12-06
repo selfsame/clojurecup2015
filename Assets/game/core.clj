@@ -12,24 +12,13 @@
     game.data
     game.menu
     game.world
-    game.play))
+    game.play
+    game.player))
 
 
-(defn pitfall [o]
-  (swap! PLAYER update-in [:health] dec)
-  (scene :room [7 0 4]))
 
-(defn player-input [o]
-  (let [[x z](joy)]
-    (position! o (v+ (->v3 o) (v* [x 0 z] 0.1)))
-    (if (< (Y (->v3 o)) -5)
-       (pitfall o))))
 
-(defn player [pos]
-  (let [o (clone! :entity)]
-    (parent! (clone! :player) o)
-    (position! o pos)
-    (route-update o player-input) o))
+
 
 
 (defn draw-ui []
@@ -41,7 +30,10 @@
       [lvl health max-health])
     ))
 
-
+(add-watch PLAYER :ui-watcher
+  (fn [k a old new]
+    (if (not= (:health old) (:health new))
+      (draw-ui))))
 
 (pdf game.std/scene [k] 
   {k (is* :intro)}
@@ -72,6 +64,7 @@
 
 (pdf game.std/scene [k loc]
   {k (is* :room)}
+
   (clear-cloned!)
   (clone! :game-camera)
   (clone! :underplane) 
@@ -79,20 +72,16 @@
   (game.world/build-room @ROOM)
   (game.world/build-floor @ROOM)
   (game.world/fill-room @ROOM)
-  (player loc)
+  (make-player loc)
   (build-map)
   )
+(scene :intro)
 
-;TODO fog 8.37 11 Linear
-
-
-(pdf game.std/scene [k]
-  {k (is* :inventory)}
-  :inventory-scene)
 
 (scene :new-game)
 (scene :new-level)
 
+(comment 
 (scene :intro)
 (game.menu/credits "SELFSAMEGAMES" (color 20 66 45) 
   {:fx :wave 
@@ -102,7 +91,5 @@
   (game.menu/credits "CLOJURE CUP 2015" (color 88 5 54) 
     {:fx :wave :loc [0 0 -8]
      :duration 4
-     :callback (fn [_] (log "done"))}))})
+     :callback (fn [_] (log "done"))}))}))
 
-(for [a [:n nil] b [:s nil] c [:e nil] d [:w nil]]
-   (remove nil? [a b c d]))

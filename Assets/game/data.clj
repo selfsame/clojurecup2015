@@ -284,8 +284,9 @@
         traps (reduce merge-pat (repeatedly (inc (srand-int 3)) #(rand-design x6x3_traps 2) ))]
     (merge-pat traps structure)))
 
+(show (rand-quad x6x3 5))
 
-(show (reduce merge-pat (repeatedly (inc (srand-int 2)) #(rand-design x6x3_traps 2) )))
+(show (reduce merge-pat (repeatedly (inc (srand-int 2)) #(rand-design x6x3 2) )))
 
 (map  #(int  (+ 0.7 (* % 0.1))) (range 30))
 (> (* (rand)(rand)(rand)) (/ 1 3))

@@ -1,13 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &149474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22428130}
+  - 222: {fileID: 22276214}
+  - 114: {fileID: 11439178}
+  m_Layer: 5
+  m_Name: chars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &11439178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: adf5b3fcc9f3bdd4b92801451eca9edf, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u26E0\u26E1\u26E2\u26E3\u26E4\u26E5\u26E6\u26E7\u26E8\u26E9\u26EA\u26EB\u26EC\u26ED\u26EE\u26EF26F0\u26F0\u26F1\u26F2\u26F3\u26F4\u26F5\u26F6\u26F7\u26F8\u26F9\u26FA\u26FB\u26FC\u26FD\u26FE\u26FF2700\u2700\u2701\u2702\u2703\u2704\u2705\u2706\u2707\u2708\u2709\u270A\u270B\u270C\u270D\u270E\u270F2710\u2710\u2711\u2712\u2713\u2714\u2715\u2716\u2717\u2718\u2719\u271A\u271B\u271C\u271D\u271E\u271F2720\u2720\u2721\u2722\u2723\u2724\u2725\u2726\u2727\u2728\u2729\u272A\u272B\u272C\u272D\u272E\u272F2730\u2730\u2731\u2732\u2733\u2734\u2735\u2736\u2737\u2738\u2739\u273A\u273B\u273C\u273D\u273E\u273F2740\u2740\u2741\u2742\u2743\u2744\u2745\u2746\u2747\u2748\u2749\u274A\u274B\u274C\u274D\u274E\u274F2750\u2750\u2751\u2752\u2753\u2754\u2755\u2756\u2757\u2758\u2759\u275A\u275B\u275C\u275D\u275E\u275F2760\u2760\u2761\u2762\u2763\u2764\u2765\u2766\u2767\u2768\u2769\u276A\u276B\u276C\u276D\u276E\u276F2770\u2770\u2771\u2772\u2773\u2774\u2775\u2776\u2777\u2778\u2779\u277A\u277B\u277C\u277D\u277E\u277F2780\u2780\u2781\u2782\u2783\u2784\u2785\u2786\u2787\u2788\u2789\u278A\u278B\u278C\u278D\u278E\u278F2790\u2790\u2791\u2792\u2793\u2794\u2795\u2796\u2797\u2798\u2799\u279A\u279B\u279C\u279D\u279E\u279F27A0\u27A0\u27A1\u27A2\u27A3\u27A4\u27A5\u27A6\u27A7\u27A8\u27A9\u27AA\u27AB\u27AC\u27AD\u27AE\u27AF27B0\u27B0\u27B1\u27B2\u27B3\u27B4\u27B5\u27B6\u27B7\u27B8\u27B9\u27BA\u27BB\u27BC\u27BD\u27BE\u27BF27C0\u27C0\u27C1\u27C2\u27C3\u27C4\u27C5\u27C6\u27C7\u27C8\u27C9\u27CA\u27CB\u27CC\u27CD\u27CE\u27CF27D0\u27D0\u27D1\u27D2\u27D3\u27D4\u27D5\u27D6\u27D7\u27D8\u27D9\u27DA\u27DB\u27DC\u27DD\u27DE\u27DF27E0\u27E0\u27E1\u27E2\u27E3\u27E4\u27E5\u27E6\u27E7\u27E8\u27E9\u27EA\u27EB\u27EC\u27ED\u27EE\u27EF27F0\u27F0\u27F1\u27F2\u27F3\u27F4\u27F5\u27F6\u27F7\u27F8\u27F9\u27FA\u27FB\u27FC\u27FD\u27FE\u27FF"
+--- !u!222 &22276214
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149474}
+--- !u!224 &22428130
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10.6999998, y: -164.330002}
+  m_SizeDelta: {x: 721.900024, y: 813.200012}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 0}
+  m_RootGameObject: {fileID: 149474}
   m_IsPrefabParent: 1

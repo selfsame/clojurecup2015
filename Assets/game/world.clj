@@ -141,7 +141,7 @@
                         (v+ (->v3 %)
                             (v* (->xyz (ROOM->xy (key-offset k))) 0.75)))
                       place-light) 
-                    (light-average (v+ @ROOM (key-offset k))))]
+                    (filter #(> (:intensity %) 4.0) (light-average (v+ @ROOM (key-offset k)))))]
                 (rotate! door (exit-directions k))
                 
 
