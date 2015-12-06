@@ -8,8 +8,8 @@
     game.std
     [tween.core :as tween]))
 
-(def >char-up (tween/position (->v3 0 0 0.5) :+ 0.5 :pow3))
-(def >char-down (tween/position (->v3 0 0 -0.5) :+ 0.5 :pow3))
+(def >char-up (tween/loc-position (->v3 0 0 0.5) :+ 0.5 :pow3))
+(def >char-down (tween/loc-position (->v3 0 0 -0.5) :+ 0.5 :pow3))
 (tween/link! >char-up >char-down >char-up)
 
 (defn >position* [& args] ((apply tween/position (butlast args)) (last args)))

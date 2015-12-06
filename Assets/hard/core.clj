@@ -172,6 +172,8 @@
   (try (mapv #(%) @_DEFERRED_) (catch Exception e nil))
   (reset! _DEFERRED_ []))
 
+(defn name! [o s] (set! (.name o) (str s)) o)
+
 
 ;uh.. so this is not really saving much typing
 (defn color-normalized-number [n] (if (> (max n 0) 1) (* n 0.003921569) n))
@@ -193,7 +195,7 @@
 (defn parent [o] (.parent (->transform o)))
 
 (defn parent! [a b]
-  (set! (.parent (.transform a)) (.transform b)))
+  (set! (.parent (.transform a)) (.transform b)) a)
 
 (defn unparent! ^GameObject [^GameObject child]
   (set! (.parent (.transform child)) nil) child)
@@ -203,6 +205,11 @@
 
 (defn position! [o pos]
   (set! (.position (.transform o)) (->v3 pos)))
+
+(defn local-position [o] (.localPosition (.transform o)))
+
+(defn local-position! [o pos]
+  (set! (.localPosition (.transform o)) (->v3 pos)))
 
 (defn local-direction [o v]
   (when-let [o (->go o)]

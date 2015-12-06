@@ -12,3 +12,7 @@
 
 (defn srand-nth [col] 
   (get col (srand-int (count col))))
+
+
+(defn sshuffle [col]
+  (sort-by (fn [_](srand)) col))
