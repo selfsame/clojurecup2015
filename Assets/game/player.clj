@@ -95,7 +95,8 @@
 (defn player-update [o]
   (let [[x z] (joy)]
     (data! o (update-in (data o) [:damage-cooldown] #(if (pos? %) (- % UnityEngine.Time/deltaTime) -1)))
-    (if (key-down? "t") (light-torch))
+    (cond (key-down? "t") (light-torch)
+      (key-down? "escape") (quit))
     (move-player o x z)
     (if (< (Y (->v3 o)) -5) (pitfall o))
     ;(set! (.text (.* (the player-debug) >Text)) (with-out-str (clojure.pprint/pprint [(data o) @PLAYER])))

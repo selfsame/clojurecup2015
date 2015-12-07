@@ -51,6 +51,7 @@
 
 (pdf game.std/scene [k]
   {k (is* :new-game)}
+  (reset! SEED (rand))
   (reset! LEVEL 0)
   (reset! POINTS 0)
   (reset! PLAYER {
@@ -87,11 +88,11 @@
   (draw-ui)
   (build-map))
 
-(scene :intro)
+
+(defn start-game [_]
+  (scene :new-game ))
 
 
-(scene :new-game)
-(scene :new-level)
 
 
 

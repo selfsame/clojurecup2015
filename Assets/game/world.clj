@@ -28,7 +28,7 @@
 
 (pdf procedural [k room]
   {k (is* :lights)}
-  (seed! [SEED @LEVEL room])
+  (seed! [@SEED @LEVEL room])
   (repeatedly (max (if (< @LEVEL 2) 1 0) (srand-nth [1 1 1 1 1 1 2 2 2 0 0 0 0]))
     (fn [] {
       :xyz (vec (interpose 4 (rand-light-xy))) 

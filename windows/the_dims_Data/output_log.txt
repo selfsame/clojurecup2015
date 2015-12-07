@@ -1,0 +1,186 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA GeForce GTX 260 (ID=0x5e2)
+    Vendor:   NVIDIA
+    VRAM:     873 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.docs.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.docs.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.editor_interop.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.editor_interop.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.macro.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.macro.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.map_utils.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.map_utils.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.meval.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.meval.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.seq_utils.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.seq_utils.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.zip_utils.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.internal.zip_utils.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.introspection.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.introspection.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.linear.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.linear.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.literals.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.literals.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.messages.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.messages.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.reflect.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.reflect.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.repl.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.repl.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.updater.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\arcadia.updater.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.clr.io.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.clr.io.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.clr.shell.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.clr.shell.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.protocols.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.protocols.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.reducers.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core.reducers.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_clr.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_clr.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_deftype.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_deftype.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_print.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_print.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_proxy.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.core_proxy.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.data.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.data.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.edn.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.edn.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.genclass.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.genclass.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.instant.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.instant.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.main.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.main.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.cl_format.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.cl_format.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.column_writer.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.column_writer.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.dispatch.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.dispatch.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.pprint_base.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.pprint_base.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.pretty_writer.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.pretty_writer.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.print_table.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.print_table.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.utilities.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.pprint.utilities.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.reflect.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.reflect.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.reflect.clr.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.reflect.clr.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.repl.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.repl.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.set.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.set.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.stacktrace.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.stacktrace.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.string.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.string.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.template.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.template.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.junit.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.junit.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.tap.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.test.tap.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.uuid.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.uuid.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.walk.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.walk.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.zip.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\clojure.zip.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.data.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.data.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.menu.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.menu.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.play.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.play.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.std.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.std.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.world.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.world.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.input.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.input.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.life.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.life.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.mesh.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.mesh.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.pdf.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.pdf.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\tween.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\tween.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\tween.protocols.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\tween.protocols.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Clojure.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Clojure.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Dynamic.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Dynamic.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.Core.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.Core.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.Metadata.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\Microsoft.Scripting.Metadata.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hooks.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hooks.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\seed.core.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\seed.core.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.player.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.player.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.sound.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\game.sound.clj.dll into Unity Child Domain
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.physics.clj.dll (this message is harmless)
+Loading C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\hard.physics.clj.dll into Unity Child Domain
+- Completed reload, in  0.132 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\jplur\Desktop\dev\clojurecup2015\windows\the_dims_Data\Managed\System.dll (this message is harmless)
+hard.core is here
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+hard.pdf load
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+points!12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2948 -> priority: 1 
+  Thread -> id: 2c6c -> priority: 1 

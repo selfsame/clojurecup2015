@@ -115,9 +115,3 @@
   (data! o (assoc (data o) :damage-cooldown 1.2))
   (>damage o)
   (remove-health o n))
-
-
-
-(clojure.pprint/pprint (macroexpand 
-'(pdf remove-health [^data o])
-  ))

@@ -1,7 +1,7 @@
 (ns game.data
   (:use seed.core))
 
-(def SEED (rand));(rand))
+(def SEED (atom (rand)));(rand))
 (def LEVEL (atom 0))
 (def DUNG (atom nil))
 (def ROOM (atom [0 0]))
@@ -325,8 +325,8 @@
     (join mb h2 (buffer mb h2) h3)))
 
 (defn floor-pattern [room] 
-  (seed! [room @LEVEL SEED])
-  (let [structure (reduce merge-pat (repeatedly (inc (srand-int 4)) #(rand-design x6x3 3) ))
+  (seed! [room @LEVEL @SEED])
+  (let [structure (reduce merge-pat (repeatedly (inc (srand-int 5)) #(rand-design x6x3 3) ))
         traps (reduce merge-pat (repeatedly (inc (srand-int 3)) #(rand-design x6x3_traps 2) ))
         falltraps (reduce merge-pat (repeatedly (srand-nth [1 1 1 2 2 3]) #(rand-design fall_traps 1) ))
         res (merge-pat traps structure)]
