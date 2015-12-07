@@ -5,6 +5,7 @@
     hard.life
     game.std
     game.data
+    game.sound
     [tween.core :as tween]))
 
 
@@ -36,6 +37,23 @@
 
 
 
+
+(pdf trigger [a b ad ^:trap bd]
+  (damage a 1))
+
+(pdf trigger [a b ^:player ad ^:torch-item bd]
+  (AUDIO! :pickup {:volume 0.3})
+  (swap! PLAYER update-in [:torches] inc)
+  (set! (.text (.* (the ui-torches) >Text)) (str (:torches @PLAYER)))
+  (defer! (destroy! b)))
+
+(pdf trigger [a b ^:player ad ^:health-item bd]
+  (AUDIO! :pickup {:volume 0.3})
+  (swap! PLAYER update-in [:health] #(min (inc %) (:max-health @PLAYER)))
+  (set! (.text (.* (the ui-health) >Text)) (str (:health @PLAYER)))
+  (defer! (destroy! b)))
+
+
 (pdf trigger [a b ad ^:door bd]
   (let [dir (:direction bd)
         offset (key-offset dir)
@@ -45,12 +63,10 @@
     ((tween/position (->v3 0) 0.01 
       (fn [_] 
         (scene :room   (v+ (->xyz (key-offset dir)) (exit-locs (reverse-dir dir))))))
-      (the :room))
+      (the :room))))
 
-    ))
 
-(pdf trigger [a b ad ^:trap bd]
-  (damage a 1))
+
 
 
 (pdf hard.life/collision-enter [a b tag id]
@@ -61,10 +77,18 @@
   {tag (is* "entity")}
   (trigger a (.gameObject b) (data a) (data (.gameObject b))))
 
+(pdf hard.life/collision-enter [a b tag id]
+  {tag (is* "faller")}
+  ((tween/euler (->v3 (v- [(rand-int 10) 0 (rand-int 10)] 5)) :+ (rand)
+    #((tween/position (->v3 0 -10 0) 1.0 {:in :pow2}) %)) a))
+
 
 (def >up (tween/position (->v3 0 0.8 0) 0.3 :+ :pow3 {:delay 1}))
 (def >down (tween/position (->v3 0 -0.8 0) 1.2 :+  {:delay 5}))
+
 (link! >up >down >up)
+
+
 
 (pdf hard.life/start [o tag id]
   {tag (is* "trap")}
@@ -92,3 +116,8 @@
   (>damage o)
   (remove-health o n))
 
+
+
+(clojure.pprint/pprint (macroexpand 
+'(pdf remove-health [^data o])
+  ))

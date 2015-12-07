@@ -15,25 +15,31 @@
     game.play
     game.player))
 
-
-
-
-
-
-
 (defn draw-ui []
   (let [lvl (str "LVL " @LEVEL)
         health (apply str (repeat (:health @PLAYER) (:heart icons)))
         max-health (apply str (repeat (:max-health @PLAYER) (:heart icons)))]
     (mapv #(set! (.text (.* %1 >Text)) %2) 
-      [(the ui-level)(the ui-health)(the ui-max-health)]
-      [lvl health max-health])
-    ))
+      [(the ui-level)(the ui-health)(the ui-max-health)
+      (the ui-global-points)(the ui-level-points)(the ui-torches)]
+      [lvl health max-health (str @POINTS)(str (:level-points @PLAYER))
+      (str (:torches @PLAYER))])
+    true))
+
 
 (add-watch PLAYER :ui-watcher
   (fn [k a old new]
-    (if (not= (:health old) (:health new))
+    (if (or (not= (:health old) (:health new))
+            (not= (:torches old) (:torches new)))
       (draw-ui))))
+
+(defn explore []
+  (if-not ((:visited @PLAYER) @ROOM)
+    (let [points (+ 1 (max (+ 10 @LEVEL) (count (:visited @PLAYER))))
+          vtd (conj (:visited @PLAYER) @ROOM)]
+      (log "points!" points)
+    (swap! PLAYER #(conj % {:level-points (+ (:level-points @PLAYER) points) 
+      :visited vtd})))))
 
 (pdf game.std/scene [k] 
   {k (is* :intro)}
@@ -46,16 +52,21 @@
 (pdf game.std/scene [k]
   {k (is* :new-game)}
   (reset! LEVEL 0)
+  (reset! POINTS 0)
   (reset! PLAYER {
-    :max-health 3
-    :health 3
-    :visited #{}})
+    :max-health 4
+    :health 4
+    :torches 4
+    :visited #{}
+    :level-points 0
+    :torch 0})
   (scene :new-level))
 
 (pdf game.std/scene [k]
   {k (is* :new-level)}
+  (swap! POINTS #(+ % (:level-points @PLAYER)))
   (swap! LEVEL inc)
-  (set! RenderSettings/ambientIntensity (float (max 0 (* (- 5.0 (* @LEVEL 0.5)) 0.1))))
+  (set! RenderSettings/ambientIntensity (float (max 0 (* (- 5.0 (* @LEVEL 0.3)) 0.1))))
   (draw-ui)
   (reset! DUNG (game.world/gen-dungeon (+ 10 @LEVEL)))
   (reset! ROOM [0 0])
@@ -64,22 +75,29 @@
 
 (pdf game.std/scene [k loc]
   {k (is* :room)}
-
   (clear-cloned!)
   (clone! :game-camera)
   (clone! :underplane) 
-  (draw-ui)
+  
   (game.world/build-room @ROOM)
   (game.world/build-floor @ROOM)
   (game.world/fill-room @ROOM)
   (make-player loc)
-  (build-map)
-  )
+  (explore)
+  (draw-ui)
+  (build-map))
+
 (scene :intro)
 
 
 (scene :new-game)
 (scene :new-level)
+
+
+
+;TODO nice seed 0.206787284559937
+;TODO turn off reflection intensity
+
 
 (comment 
 (scene :intro)

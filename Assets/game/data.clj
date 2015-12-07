@@ -1,16 +1,22 @@
 (ns game.data
   (:use seed.core))
 
-(def SEED (rand))
+(def SEED (rand));(rand))
 (def LEVEL (atom 0))
 (def DUNG (atom nil))
 (def ROOM (atom [0 0]))
 (def KNOWN (atom #{}))
+(def POINTS (atom 0))
+
+(def _CACHE (atom nil))
 
 (def PLAYER (atom {
-  :max-health 3
-  :health 3
+  :max-health 4
+  :health 4
+  :torches 4
   :visited #{}
+  :level-points 0
+  :torch 0
   }))
 
 (defn ->xyz [v] [(first v) 0 (last v)])
@@ -93,6 +99,8 @@
 (def _ '_)
 (def u 'u) ;assertive floor
 (def M 'M) ;spikes
+(def B 'B) ;button
+(def F 'F) ;faller
 [
 [. . . . . . . . . . . . .] 
 [. . . . . . . . . . . . .] 
@@ -134,7 +142,7 @@
 [. . . . o o]
 [. . . . . .]]
 [
-[. . . . . o]
+[. . . . F o]
 [. . . . . .]
 [. . . . . .]]
 [
@@ -156,7 +164,7 @@
 [
 [. . . . _ _]
 [. . . . . _]
-[. . . . . .]]
+[. . F . . .]]
 [
 [. . . . . .]
 [. . _ _ . .]
@@ -187,7 +195,7 @@
 (def x6x3_traps
 [
 [
-[. . . . . .]
+[. F . . . .]
 [. . . . M .]
 [. . . . . .]]
 [
@@ -203,11 +211,11 @@
 [. M . . . .]
 [. . . . M .]]
 [
-[. . . . . .]
-[. . M . . .]
-[. . M . . .]]
+[. F F F F .]
+[. F M F F .]
+[. . M . F .]]
 [
-[. . . . . .]
+[. . . . . F]
 [. . . . . .]
 [M . M . . .]]
 [
@@ -221,8 +229,46 @@
 [
 [. . . . M .]
 [M M . . M .]
-[. . . . . .]]])
+[. . . . . .]]
+[
+[F . M M . .]
+[. . M M . .]
+[. . M M . .]]
+[
+[. . . _ _ _]
+[. . . . . .]
+[. . . F . .]]
+[
+[. . . _ F _]
+[. F . _ F _]
+[. . . F . .]]
+[
+[F F F F F F]
+[F F F F F F]
+[F F F F F F]]])
 
+(def fall_traps[
+[
+[. . M . F .]
+[. F . M . .]
+[. . . . M .]]
+[
+[F . F . F .]
+[. F . F . F]
+[F . F . F .]]
+[
+[. . . . . .]
+[. F F F F .]
+[. . . . . .]]
+[
+[. . F . . .]
+[. . . F . .]
+[. . . . F .]]
+[
+[F . . . . F]
+[. F . . F .]
+[F . F F . F]]
+])
 
 (defn flip [pat d]
   (cond 
@@ -279,14 +325,17 @@
     (join mb h2 (buffer mb h2) h3)))
 
 (defn floor-pattern [room] 
-  (seed! [room @LEVEL])
+  (seed! [room @LEVEL SEED])
   (let [structure (reduce merge-pat (repeatedly (inc (srand-int 4)) #(rand-design x6x3 3) ))
-        traps (reduce merge-pat (repeatedly (inc (srand-int 3)) #(rand-design x6x3_traps 2) ))]
-    (merge-pat traps structure)))
+        traps (reduce merge-pat (repeatedly (inc (srand-int 3)) #(rand-design x6x3_traps 2) ))
+        falltraps (reduce merge-pat (repeatedly (srand-nth [1 1 1 2 2 3]) #(rand-design fall_traps 1) ))
+        res (merge-pat traps structure)]
+        (if (> (srand-int @LEVEL) 8)
+          (if (< (srand) 0.2) (merge-pat res falltraps)
+            (merge-pat falltraps res ))
+          res)
+    ))
 
-(show (rand-quad x6x3 5))
+;(show (rand-quad x6x3 5))
 
-(show (reduce merge-pat (repeatedly (inc (srand-int 2)) #(rand-design x6x3 2) )))
-
-(map  #(int  (+ 0.7 (* % 0.1))) (range 30))
-(> (* (rand)(rand)(rand)) (/ 1 3))
+;(show (reduce merge-pat (repeatedly (inc (srand-int 2)) #(rand-design x6x3 2) )))

@@ -19,7 +19,7 @@
    (max 2 (min  (srand-int room-h) (- room-h 3)))])
 
 (defn rand-color []
-  (color (->vec (.normalized (->v3 (srand)(srand)(srand))))))
+  (color (->vec (v* (.normalized (->v3 (srand)(srand)(srand))) 1.2))))
 
 (def rand-light-intensity #(+ 2 (* (srand) 6)))
 
@@ -29,7 +29,7 @@
 (pdf procedural [k room]
   {k (is* :lights)}
   (seed! [SEED @LEVEL room])
-  (repeatedly (max (if (< @LEVEL 4) 1 0) (srand-int 3))
+  (repeatedly (max (if (< @LEVEL 2) 1 0) (srand-nth [1 1 1 1 1 1 2 2 2 0 0 0 0]))
     (fn [] {
       :xyz (vec (interpose 4 (rand-light-xy))) 
       :color (rand-color) 
@@ -86,12 +86,13 @@
   (let [res (for [     
       _x (range 9)
       _z (range 9)
+
       :let [[x z] (v* (v- [_z _x] 4) [1 -1])
              xz (v+ [x z] @ROOM)
              exitchar (dir-chars (set (->exits xz)))]]
      [(str (if (get @DUNG xz) 
               (if (= xz @ROOM) "♦" " ") " ") (if (= 4 x) "\n"))
-      (str exitchar (if (= 4 x) "\n"))] )
+      (str (if ((:visited @PLAYER) xz) exitchar " ") (if (= 4 x) "\n"))] )
     rooms (apply str (mapv first res))
     doors (apply str (mapv last res))]
   (set! (.text (.* (the minimap) >Text)) rooms)
@@ -150,13 +151,30 @@
     exit-locs)
     room-parts))
 
+(def >rot (tween/euler (->v3 0 360 0) 4.0 ))
+(link! >rot >rot)
+
+
+(defn make-item [pos]
+  (let [k (srand-nth [:torch-item :torch-item :torch-item :health-item])
+        o (clone! k pos)]
+    (rotate! o (->v3 0 (rand-int 360) 0))
+    (parent! (clone! :item-light (v+ (->v3 o) [0 0.65 0])) o)
+    (data! o {:item true k true})
+    (>rot o)
+    ))
+
+
+
 (def floorcode->k
   {'. :floor
    'u :floor
    'l :column
    'o :block-floor
    '_ :empty
-   'M :trap})
+   'M :trap
+   'B :button
+   'F :faller})
 
 (defn build-floor [loc]
   (let [holder (name! (clone! :empty) :floor) 
@@ -164,5 +182,9 @@
     (vec (for [z (range (count pat))
           x (range (count (first pat)))
           :let [pos (v+ (->xyz [x z]) [1 0 1])
-                k (floorcode->k (get (get pat z) x))]]
+                k (floorcode->k (get (get pat z) x))
+                item (when ( #{:floor} k)
+                       (if (< (srand-int 400) 4) 
+                        (make-item pos)))]]
+
       (parent! (clone! k pos) holder)))))

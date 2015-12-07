@@ -25,3 +25,15 @@
         (fn [me] (if-not (.isPlaying (.* (->go me) >AudioSource))
             (destroy! (->go me)))))))))
 
+
+(defn AUDIO! 
+  ([k] (AUDIO! k {})) 
+  ([k opts] 
+    (when-let [clip (get audio-clips k)]
+      (let [_s (first (remove #(.isPlaying %) (child-components (the audios) UnityEngine.AudioSource)))
+            source _s]
+        (when _s (set! (.clip _s) clip)
+        (if (:volume opts) (set! (.volume source) (float (:volume opts))))
+        (.Play _s))))))
+
+ 
